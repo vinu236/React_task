@@ -18,3 +18,14 @@ To get started with this project, follow these steps:
 ```bash
 git clone https://github.com/yourusername/vite-project.git
 cd vite-project
+
+## Usage
+
+2. Usage
+
+```bash
+npm install
+
+
+
+
