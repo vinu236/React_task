@@ -8,7 +8,7 @@ import Spinner from "./Components/Spinner"
 
 const App = () =>{
 
-  const [isLoading]= useGetData()
+  const [isLoading] = useGetData()
 
   if(isLoading){
     return  <Spinner/>
