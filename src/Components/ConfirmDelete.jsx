@@ -1,12 +1,16 @@
 import { Box, Typography, Button, Stack } from "@mui/material";
 
 const ConfirmDelete = ({ onCloseModal, onDelete, isloading }) => {
+  const buttonStyle = {
+    backgroundColor: 'black', // Set the background color to black
+    color: 'white',
+  };
   return (
-    <Box sx={{}}>
-      <Typography component={"h3"} sx={{ marginBottom: 2 }}>
+    <Box >
+      <Typography component={"h3"} sx={{ marginBottom: 2, fontFamily:"cursive" }}>
         Delete
       </Typography>
-      <Typography component={"p"} sx={{ marginBottom: 2 }}>
+      <Typography component={"p"} sx={{ marginBottom: 2 ,fontFamily:"cursive"}}>
         Are you sure you want to delete this ? This action cannot be undone.
       </Typography>
       <Stack
@@ -16,10 +20,10 @@ const ConfirmDelete = ({ onCloseModal, onDelete, isloading }) => {
         justifyContent={"end"}
         alignItems={"center"}
       >
-        <Button variant="contained" onClick={onCloseModal} disabled={isloading}>
+        <Button variant="contained" onClick={onCloseModal} disabled={isloading} style={buttonStyle}>
           Cancel
         </Button>
-        <Button variant="contained" onClick={onDelete}>
+        <Button variant="contained" onClick={onDelete} style={buttonStyle}>
           Delete
         </Button>
       </Stack>

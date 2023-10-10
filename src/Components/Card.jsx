@@ -24,6 +24,8 @@ const UserCard = ({ userData }) => {
         borderRadius: 7,
         bgcolor: "#f5f5f5",
         boxShadow: 0,
+        maxHeight:300,
+        minHeight:300
       }}
     >
       <CardMedia
@@ -38,9 +40,9 @@ const UserCard = ({ userData }) => {
           component={"div"}
           gutterBottom
           variant="h5"
-          sx={{ padding: 0 }}
+          sx={{ padding: 0,fontFamily:"cursive" }}
         >
-          {`${title} ${first} ${last}`}
+          {`${title} ${first}`}
         </Typography>
         <CardActions>
           <ButtonModal id={uuid} />

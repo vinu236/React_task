@@ -15,7 +15,7 @@ const UserCardContainer = () => {
   return (
     <Box bgcolor={"#e9eef2"} padding={4}>
   
-   <Typography sx={{marginBottom:4,fontFamily:"sans-serif", fontSize:30,marginLeft:7}}>Users ({usersData.length})</Typography>
+   <Typography sx={{marginBottom:4,fontFamily:"cursive", fontSize:30,marginLeft:7,}}>Users ({usersData.length})</Typography>
     <Stack
       direction="row"
       justifyContent="center"

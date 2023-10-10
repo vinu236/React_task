@@ -19,7 +19,10 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
+const buttonStyle = {
+  backgroundColor: 'black', // Set the background color to black
+  color: 'white',
+};
 const ButtonModal = ({ id }) => {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,8 +50,8 @@ const ButtonModal = ({ id }) => {
 
   return (
     <>
-      <Button size="sm" variant="contained" onClick={handleOpen}>
-        Button
+      <Button size="sm" variant="contained" style={buttonStyle} onClick={handleOpen}>
+        Delete
       </Button>
       <Modal
         open={show}

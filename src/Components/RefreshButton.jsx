@@ -6,25 +6,30 @@ import { setUsersData } from "../Redux/usersDataSlice";
 import { setLoading } from "../Redux/loadingSlice";
 import fetchApi from "../api/api";
 
-const style = {
-  position: "fixed",
-  bottom: "8%",
-  right: "1.5%",
-  width: 60,
-  height: 60,
-  borderRadius: "100px",
-  backgroundColor: "#007bff",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  cursor: isLoading ? "not-allowed" : "pointer",
-  // outLine:'none',
-  border: "none",
-};
+
 
 const RefreshButton = () => {
+  
+
+
   const dispatch = useDispatch();
   const isLoading = useSelector((store) => store.loading);
+
+  const style = {
+    position: "fixed",
+    bottom: "8%",
+    right: "1.5%",
+    width: 60,
+    height: 60,
+    borderRadius: "100px",
+    backgroundColor: "#000",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    cursor: isLoading ? "not-allowed" : "pointer",
+    // outLine:'none',
+    border: "none",
+  };
 
   const handleRefresh = () => {
     dispatch(setLoading(true));
