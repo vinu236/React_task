@@ -1,28 +1,21 @@
 import UserCard from "./Card";
 import { Box, Stack,Typography } from "@mui/material";
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CardLoading from "./CardLoader";
 const UserCardContainer = () => {
 
   const usersData = useSelector(store=>store.usersData);
   const loading = useSelector(store=>store.loading)
- 
-  console.log("hellllllllllllllllllllllllllllllw")
-  console.log(loading)  
+   
   if (loading) {
     return (
      <CardLoading/>)
   }
   
-
-
-
-
   return (
     <Box bgcolor={"#e9eef2"} padding={4}>
   
-      <Typography sx={{marginBottom:4,fontFamily:"sans-serif", fontSize:30,marginLeft:7}}>Users ({usersData.length})</Typography>
+   <Typography sx={{marginBottom:4,fontFamily:"sans-serif", fontSize:30,marginLeft:7}}>Users ({usersData.length})</Typography>
     <Stack
       direction="row"
       justifyContent="center"
